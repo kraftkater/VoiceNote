@@ -1,0 +1,72 @@
+name: Bug report
+description: Something does not work as expected
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting! Please fill in as much as you can — hardware and logs make most problems solvable.
+        **Remove anything private from logs and screenshots.**
+  - type: input
+    id: version
+    attributes:
+      label: VoiceNote version
+      description: Content of the `VERSION` file or the release you downloaded.
+      placeholder: "0.9.0"
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version
+      placeholder: "Windows 11 23H2"
+    validations:
+      required: true
+  - type: input
+    id: hardware
+    attributes:
+      label: GPU and driver
+      description: Model and driver version, or "no discrete GPU".
+      placeholder: "NVIDIA RTX 5060 Laptop, driver 581.xx"
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Installation / first start
+        - Recording / hotkeys
+        - Model download
+        - Whisper (faster-whisper)
+        - Engine pack (GPU / SenseVoice / PyTorch / llama.cpp)
+        - File → text
+        - LLM clean-up
+        - User interface / translation
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: model
+    attributes:
+      label: Model and processor
+      placeholder: "large-v3-turbo, CUDA"
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. ...
+        2. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: The *Log* section of the window, and if present `crash.log`, `worker.log`, `packs/install.log`.
+      render: text

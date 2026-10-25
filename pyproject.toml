@@ -1,0 +1,25 @@
+[project]
+name = "voicenote"
+description = "Portable local voice dictation for Windows"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dynamic = ["version"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+extend-exclude = ["python", "packs", "models"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "B", "UP"]
+ignore = [
+  "E501",   # long lines are tolerated, see CONTRIBUTING
+  "E701", "E702", "E731", "E741",
+  "B008", "B904",
+  "UP031", "UP032",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

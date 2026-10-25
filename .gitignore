@@ -1,0 +1,34 @@
+# Portable runtime (created by setup.ps1 / at run time)
+/python/
+/models/
+/packs/
+/recordings/
+/notes/
+/settings.json
+/crash.log
+/worker.log
+/*.log
+
+# Build output
+/dist/
+/build/
+*.egg-info/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Editors / OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini

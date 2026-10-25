@@ -1,0 +1,50 @@
+{
+  "_comment": "Every external address and package name VoiceNote downloads from lives here. If a link or package changes, edit this file (no code changes needed). Lists are tried in order. Missing or broken entries fall back to the built-in defaults.",
+  "python_embed_urls": [
+    "https://www.python.org/ftp/python/3.11.9/python-3.11.9-embed-amd64.zip"
+  ],
+  "get_pip_urls": [
+    "https://bootstrap.pypa.io/get-pip.py"
+  ],
+  "pip_index_urls": [
+    ""
+  ],
+  "pip_extra_index_urls": [],
+  "torch_cuda_indexes": [
+    "https://download.pytorch.org/whl/cu128",
+    "https://download.pytorch.org/whl/cu126",
+    "https://download.pytorch.org/whl/cu130"
+  ],
+  "hf_base": "https://huggingface.co",
+  "keep_wheels": false,
+  "packs": {
+    "gpu": {
+      "pip": [
+        "nvidia-cublas-cu12",
+        "nvidia-cudnn-cu12==9.*"
+      ]
+    },
+    "sensevoice": {
+      "pip": [
+        "sherpa-onnx"
+      ]
+    },
+    "pytorch": {
+      "pip": [
+        "qwen-asr"
+      ]
+    }
+  },
+  "whisper_repos": {},
+  "extra_models": {},
+  "llamacpp_release_api": "https://api.github.com/repos/ggml-org/llama.cpp/releases?per_page=8",
+  "llamacpp_assets": {
+    "cpu": [
+      "bin-win-cpu-x64\\.zip$",
+      "bin-win-avx2-x64\\.zip$"
+    ],
+    "gpu": [
+      "bin-win-vulkan-x64\\.zip$"
+    ]
+  }
+}
