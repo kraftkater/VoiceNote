@@ -909,7 +909,7 @@ class MainWindow(QMainWindow):
 
         # processor
         self.cb_dev = NoWheelCombo()
-        for code, key in (("auto", "dev_auto"), ("cpu", "dev_cpu"), ("cuda", "dev_gpu")):
+        for code, _key in (("auto", "dev_auto"), ("cpu", "dev_cpu"), ("cuda", "dev_gpu")):
             self.cb_dev.addItem("", code)
         self.row(lay, "sp_device", self.cb_dev)
         lay.addWidget(self.hint("dev_hint"))

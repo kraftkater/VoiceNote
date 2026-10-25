@@ -16,7 +16,8 @@ select = ["E", "F", "W", "B", "UP"]
 ignore = [
   "E501",   # long lines are tolerated, see CONTRIBUTING
   "E701", "E702", "E731", "E741",
-  "B008", "B904",
+  "B008", "B904", "B905",
+  "E402",   # voicenote.py sets up paths before some imports
   "UP031", "UP032",
 ]
 
